@@ -1,0 +1,22 @@
+{
+  "name": "btc-test",
+  "version": "1.0.0",
+  "description": "",
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "*",
+    "gulp": "*",
+    "gulp-autoprefixer": "*",
+    "gulp-concat": "*",
+    "gulp-sass": "*",
+    "gulp-rigger": "*",
+    "gulp-svgo": "^1.2.0",
+    "gulp-uglify": "*",
+    "svgo": "*",
+    "csso": "*"
+  },
+  "dependencies": {
+    "gulp-shorthand": "*"
+  }
+}

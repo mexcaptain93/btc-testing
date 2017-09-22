@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "name": "Jewels of Nizam",
+    "author": "Geeta Devi",
+    "image": "book-1.jpg",
+    "rating": 4.3,
+    "price": 0,
+    "views": 1234
+  },
+  {
+    "id": 2,
+    "name": "Cakes and Bakes",
+    "author": "Sanjeev Kapoor",
+    "image": "book-2.jpg",
+    "rating": 4.3,
+    "price": 100,
+    "views": 1232
+  },
+  {
+    "id": 3,
+    "name": "Cakes and Bakes 2",
+    "author": "Sanjeev Kapoor",
+    "image": "book-3.jpg",
+    "rating": 4.3,
+    "price": 21,
+    "views": 231
+  },
+  {
+    "id": 4,
+    "name": "Jewels of Nizam 2",
+    "author": "Sanjeev Kapoor",
+    "image": "book-4.jpg",
+    "rating": 4.3,
+    "price": 0,
+    "views": 500
+  },
+  {
+    "id": 11,
+    "name": "Jewels of Nizam",
+    "author": "Geeta Devi",
+    "image": "book-1.jpg",
+    "rating": 4.3,
+    "price": 0,
+    "views": 1234
+  },
+  {
+    "id": 6,
+    "name": "Cakes and Bakes",
+    "author": "Sanjeev Kapoor",
+    "image": "book-2.jpg",
+    "rating": 4.3,
+    "price": 100,
+    "views": 1232
+  },
+  {
+    "id": 7,
+    "name": "Cakes and Bakes 2",
+    "author": "Sanjeev Kapoor",
+    "image": "book-3.jpg",
+    "rating": 4.3,
+    "price": 21,
+    "views": 231
+  },
+  {
+    "id": 8,
+    "name": "Jewels of Nizam 2",
+    "author": "Sanjeev Kapoor",
+    "image": "book-4.jpg",
+    "rating": 4.3,
+    "price": 0,
+    "views": 500
+  }
+]

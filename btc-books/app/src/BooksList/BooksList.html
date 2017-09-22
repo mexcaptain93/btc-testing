@@ -1,0 +1,16 @@
+<div class="books">
+    <div class="books__list">
+        <div class="books__item book" ng-repeat="book in books | filter:dynamicFilter | orderBy:dynamicOrder">
+            <div class="book__image">
+                <div style="background-image: url('img/temp/{{book.image}}');" alt="{{book.name}}"></div>
+            </div>
+            <div class="book__name">{{book.name}}</div>
+            <div class="book__author">by {{book.author}}</div>
+            <div class="book__stars">
+                {{book.rating}}
+                <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                    class="fa fa-star"></i><i class="fa fa-star"></i>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,15 @@
+.main {
+  min-height: 100%;
+  display: flex;
+  box-orient: horizontal;
+  flex-direction: row;
+  font-family: 'Arial';
+  &__sidebar {
+    min-height: 100%;
+    flex:  0;
+  }
+  &__content {
+    min-height: 100%;
+    flex: 1;
+  }
+}

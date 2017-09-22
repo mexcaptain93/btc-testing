@@ -1,0 +1,420 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=760px, initial-scale=1, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://use.fontawesome.com/6e87c517a3.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.6/angular.min.js"></script>
+    <title>BooksApp</title>
+</head>
+<body>
+<div class="main">
+    <div class="main__sidebar">
+        <div class="sidebar">
+            <div class="sidebar__add">
+                <a href="#" class="btn btn_big"><i class="fa fa-plus"></i> Add a book</a>
+            </div>
+            <div class="sidebar__menu">
+                <ul class="menu">
+                    <li class="menu__item">
+                        <a href="#"><i class="fa fa-book"></i> Now Reading</a>
+                    </li>
+                    <li class="menu__item menu__item_active">
+                        <a href="#"><i class="fa fa-globe"></i> Browse</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#"><i class="fa fa-shopping-cart"></i> Buy Books</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#"><i class="fa fa-star"></i> Favourite Books</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#"><i class="fa fa-th-list"></i> Wishlist</a>
+                    </li>
+                </ul>
+        
+            </div>
+            <div class="sidebar__actions actions">
+                <div class="actions__item action">
+                    <i class="action__icon fa fa-clock-o"></i>
+                    <div class="action__text">
+                        <span>You added <a href="#">Fight Club</a> by <a href="#">Chuck Palahniuk</a> to your <a href="#">Must Read Titles</a>.</span>
+                    </div>
+                    <div class="action__time">
+                        <span>24 minutes ago</span>
+                    </div>
+                </div>
+                <div class="actions__item action">
+                    <i class="action__icon fa fa-clock-o"></i>
+                    <div class="action__text">
+                        <span>You added <a href="#">The Trial</a> by <a href="#">Franz Kafka</a> to your <a href="#">Must Read Titles</a>.</span>
+                    </div>
+                    <div class="action__time">
+                        <span>24 minutes ago</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main__content">
+        <div class="topbar">
+            <div class="topbar__heading">
+                <h1>Browse Available Books</h1>
+            </div>
+            <div class="topbar__filter filter">
+                <div class="filter__list">
+                    <input id="filter-1" type="radio" name="filter" value="all" checked>
+                    <label for="filter-1">
+                        <div class="filter__item">
+                            <span>All books</span>
+                        </div>
+                    </label>
+                    <input id="filter-2" type="radio" name="filter" value="recent">
+                    <label for="filter-2">
+                        <div class="filter__item">
+                            <span>Most Recent</span>
+                        </div>
+                    </label>
+        
+                </div>
+                <div class="filter__right">
+                    <div class="filter__search">
+                        <input class="input" type="text" placeholder="Enter Keywords">
+                        <i class="fa fa-search"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="books">
+            <div class="books__list">
+                <div class="books__item book">
+                    <div class="book__image">
+                        <div style="background-image: url('../img/temp/book-1.jpg');" alt="Jewels of Nizam"></div>
+                    </div>
+                    <div class="book__name">Jewels of Nizam Jewels of Nizam Jewels of Nizam</div>
+                    <div class="book__author">by Geeta Devi</div>
+                    <div class="book__stars">
+                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                            class="fa fa-star"></i><i class="fa fa-star"></i>
+                    </div>
+                </div>
+                <div class="books__item book">
+                    <div class="book__image">
+                        <div style="background-image: url('img/temp/book-2.jpg');" alt="Jewels of Nizam"></div>
+                    </div>
+                    <div class="book__name">Jewels of Nizam</div>
+                    <div class="book__author">by Geeta Devi</div>
+                    <div class="book__stars">
+                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                            class="fa fa-star"></i><i class="fa fa-star"></i>
+                    </div>
+                </div>
+                <div class="books__item book">
+                    <div class="book__image">
+                        <div style="background-image: url('img/temp/book-3.jpg');" alt="Jewels of Nizam"></div>
+                    </div>
+                    <div class="book__name">Jewels of Nizam</div>
+                    <div class="book__author">by Geeta Devi</div>
+                    <div class="book__stars">
+                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                            class="fa fa-star"></i><i class="fa fa-star"></i>
+                    </div>
+                </div>
+                <div class="books__item book">
+                    <div class="book__image">
+                        <div style="background-image: url('img/temp/book-4.jpg');" alt="Jewels of Nizam"></div>
+                    </div>
+                    <div class="book__name">Jewels of Nizam</div>
+                    <div class="book__author">by Geeta Devi</div>
+                    <div class="book__stars">
+                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                            class="fa fa-star"></i><i class="fa fa-star"></i>
+                    </div>
+                </div>
+                <div class="books__item book">
+                    <div class="book__image">
+                        <div style="background-image: url('../img/temp/book-1.jpg');" alt="Jewels of Nizam"></div>
+                    </div>
+                    <div class="book__name">Jewels of Nizam Jewels of Nizam Jewels of Nizam</div>
+                    <div class="book__author">by Geeta Devi</div>
+                    <div class="book__stars">
+                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                            class="fa fa-star"></i><i class="fa fa-star"></i>
+                    </div>
+                </div>
+                <div class="books__item book">
+                    <div class="book__image">
+                        <div style="background-image: url('img/temp/book-2.jpg');" alt="Jewels of Nizam"></div>
+                    </div>
+                    <div class="book__name">Jewels of Nizam</div>
+                    <div class="book__author">by Geeta Devi</div>
+                    <div class="book__stars">
+                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                            class="fa fa-star"></i><i class="fa fa-star"></i>
+                    </div>
+                </div>
+                <div class="books__item book">
+                    <div class="book__image">
+                        <div style="background-image: url('img/temp/book-3.jpg');" alt="Jewels of Nizam"></div>
+                    </div>
+                    <div class="book__name">Jewels of Nizam</div>
+                    <div class="book__author">by Geeta Devi</div>
+                    <div class="book__stars">
+                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                            class="fa fa-star"></i><i class="fa fa-star"></i>
+                    </div>
+                </div>
+                <div class="books__item book">
+                    <div class="book__image">
+                        <div style="background-image: url('img/temp/book-4.jpg');" alt="Jewels of Nizam"></div>
+                    </div>
+                    <div class="book__name">Jewels of Nizam</div>
+                    <div class="book__author">by Geeta Devi</div>
+                    <div class="book__stars">
+                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                            class="fa fa-star"></i><i class="fa fa-star"></i>
+                    </div>
+                </div>
+                <div class="books__item book">
+                    <div class="book__image">
+                        <div style="background-image: url('../img/temp/book-1.jpg');" alt="Jewels of Nizam"></div>
+                    </div>
+                    <div class="book__name">Jewels of Nizam Jewels of Nizam Jewels of Nizam</div>
+                    <div class="book__author">by Geeta Devi</div>
+                    <div class="book__stars">
+                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                            class="fa fa-star"></i><i class="fa fa-star"></i>
+                    </div>
+                </div>
+                <div class="books__item book">
+                    <div class="book__image">
+                        <div style="background-image: url('img/temp/book-2.jpg');" alt="Jewels of Nizam"></div>
+                    </div>
+                    <div class="book__name">Jewels of Nizam</div>
+                    <div class="book__author">by Geeta Devi</div>
+                    <div class="book__stars">
+                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                            class="fa fa-star"></i><i class="fa fa-star"></i>
+                    </div>
+                </div>
+                <div class="books__item book">
+                    <div class="book__image">
+                        <div style="background-image: url('img/temp/book-3.jpg');" alt="Jewels of Nizam"></div>
+                    </div>
+                    <div class="book__name">Jewels of Nizam</div>
+                    <div class="book__author">by Geeta Devi</div>
+                    <div class="book__stars">
+                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                            class="fa fa-star"></i><i class="fa fa-star"></i>
+                    </div>
+                </div>
+                <div class="books__item book">
+                    <div class="book__image">
+                        <div style="background-image: url('img/temp/book-4.jpg');" alt="Jewels of Nizam"></div>
+                    </div>
+                    <div class="book__name">Jewels of Nizam</div>
+                    <div class="book__author">by Geeta Devi</div>
+                    <div class="book__stars">
+                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                            class="fa fa-star"></i><i class="fa fa-star"></i>
+                    </div>
+                </div>
+                <div class="books__item book">
+                    <div class="book__image">
+                        <div style="background-image: url('../img/temp/book-1.jpg');" alt="Jewels of Nizam"></div>
+                    </div>
+                    <div class="book__name">Jewels of Nizam Jewels of Nizam Jewels of Nizam</div>
+                    <div class="book__author">by Geeta Devi</div>
+                    <div class="book__stars">
+                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                            class="fa fa-star"></i><i class="fa fa-star"></i>
+                    </div>
+                </div>
+                <div class="books__item book">
+                    <div class="book__image">
+                        <div style="background-image: url('img/temp/book-2.jpg');" alt="Jewels of Nizam"></div>
+                    </div>
+                    <div class="book__name">Jewels of Nizam</div>
+                    <div class="book__author">by Geeta Devi</div>
+                    <div class="book__stars">
+                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                            class="fa fa-star"></i><i class="fa fa-star"></i>
+                    </div>
+                </div>
+                <div class="books__item book">
+                    <div class="book__image">
+                        <div style="background-image: url('img/temp/book-3.jpg');" alt="Jewels of Nizam"></div>
+                    </div>
+                    <div class="book__name">Jewels of Nizam</div>
+                    <div class="book__author">by Geeta Devi</div>
+                    <div class="book__stars">
+                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                            class="fa fa-star"></i><i class="fa fa-star"></i>
+                    </div>
+                </div>
+                <div class="books__item book">
+                    <div class="book__image">
+                        <div style="background-image: url('img/temp/book-4.jpg');" alt="Jewels of Nizam"></div>
+                    </div>
+                    <div class="book__name">Jewels of Nizam</div>
+                    <div class="book__author">by Geeta Devi</div>
+                    <div class="book__stars">
+                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                            class="fa fa-star"></i><i class="fa fa-star"></i>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal">
+    <div class="modal__wrap">
+        <div class="modal__body">
+            <div class="modal__close">
+                <i class="fa fa-close"></i>
+            </div>
+            <div class="modal__content modal-add">
+                <div class="modal-add__heading">
+                    <h2>Add new book</h2>
+                </div>
+                <div class="modal-add__content">
+                    <div class="modal-add__tabs">
+                        <ul class="tabs">
+                            <li class="tabs__item tabs__item_active">
+                                <i class="fa fa-align-center"></i><span>General</span>
+                            </li>
+                            <li class="tabs__item">
+                                <i class="fa fa-tags"></i><span>Genre</span>
+                            </li>
+                            <li class="tabs__item">
+                                <i class="fa fa-file-image-o"></i><span>Poster</span>
+                            </li>
+                            <li class="tabs__item">
+                                <i class="fa fa-info-circle"></i><span>Info</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="modal-add__form form">
+                        <form>
+                            <div class="form__row">
+                                <div class="form__item">
+                                    <div class="form__label form__label_required">
+                                        <span>Title</span>
+                                    </div>
+                                    <div class="form__input">
+                                        <input type="text" class="input input_cornered" placeholder="Enter title">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form__row">
+                                <div class="form__item">
+                                    <div class="form__label form__label_required">
+                                        <span>Author</span>
+                                    </div>
+                                    <div class="form__input">
+                                        <input type="text" class="input input_cornered" placeholder="Enter author">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form__row">
+                                <div class="form__item">
+                                    <div class="form__label form__label_required">
+                                        <span>Publisher</span>
+                                    </div>
+                                    <div class="form__input">
+                                        <input type="text" class="input input_cornered" placeholder="Enter publisher">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form__row">
+                                <div class="form__item">
+                                    <div class="form__label">
+                                        <span>Paperback</span>
+                                    </div>
+                                    <div class="form__input">
+                                        <input type="text" class="input input_cornered" placeholder="Enter paperback">
+                                    </div>
+                                </div>
+                                <div class="form__item">
+                                    <div class="form__label form__label_required">
+                                        <span>ISBN</span>
+                                    </div>
+                                    <div class="form__input">
+                                        <input type="text" class="input input_cornered" placeholder="Enter ISBN">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form__row">
+                                <div class="form__item">
+                                    <div class="form__label form__label_required">
+                                        <span>Summary</span>
+                                    </div>
+                                    <div class="form__input">
+                                        <input type="text" class="input input_cornered" placeholder="Enter summary">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form__row">
+                                <div class="form__item">
+                                    <div class="form__label form__label_required">
+                                        <span>Genre</span>
+                                    </div>
+                                    <div class="form__input">
+                                        <input type="text" class="input input_cornered" placeholder="Enter genre">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form__row">
+                                <div class="form__item">
+                                    <div class="form__label form__label_required">
+                                        <span>Poster</span>
+                                    </div>
+                                    <div class="form__input">
+                                        <span>Default poster is book-1.jpg =(</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form__row">
+                                <div class="form__item">
+                                    <div class="form__label form__label_required">
+                                        <span>Info</span>
+                                    </div>
+                                    <div class="form__input">
+                                        <textarea class="input input_cornered" name="" id="" cols="30" rows="10"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-add__footer">
+                    <a href="#" class="btn btn_big btn_gray">Cancel</a>
+                    <a href="#" class="btn btn_big">Add book</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal">
+    <div class="modal__wrap">
+        <div class="modal__body modal__body_ok">
+            <div class="modal__close">
+                <i class="fa fa-close"></i>
+            </div>
+            <div class="modal__content modal-ok">
+                <div class="modal-ok__heading">
+                    <h2>The book NAME successfully added</h2>
+                </div>
+                <div class="modal-ok__footer">
+                    <a href="#" class="btn">Close</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

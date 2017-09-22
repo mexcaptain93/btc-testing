@@ -1,0 +1,64 @@
+.topbar {
+  width: 100%;
+  background-color: $gray_light;
+  &__heading {
+    padding: 22px 20px;
+    border-bottom: 2px solid $blue_light;
+    h1 {
+      color: $blue_dark;
+      font-size: 22px;
+      line-height: 26px;
+    }
+  }
+  &__filter {
+    position: relative;
+    padding: 11px 20px;
+    border-bottom: 2px solid $blue_light;
+    .filter {
+      &__list {
+        font-size: 0;
+        left: 0;
+        input[type="radio"] {
+          display: none;
+          &:checked + label > .filter__item {
+            span {
+              background-color: $blue_light2;
+              color: $white;
+            }
+          }
+        }
+      }
+      &__item {
+        display: inline-block;
+        span {
+          font-size: 12px;
+          line-height: 26px;
+          text-decoration: none;
+          color: $violet_light2;
+          padding: 3px 10px;
+          border-radius: 9px;
+          cursor: pointer;
+        }
+      }
+      &__right {
+        position: absolute;
+        top: 9px;
+        right: 20px;
+      }
+      &__search {
+        display: inline-block;
+        position: relative;
+        .input {
+          padding-right: 40px;
+        }
+        i {
+          position: absolute;
+          top: 50%;
+          margin-top: -10px;
+          right: 20px;
+          color: $violet_light2;
+        }
+      }
+    }
+  }
+}

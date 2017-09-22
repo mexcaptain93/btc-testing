@@ -1,0 +1,41 @@
+.btn {
+  display: inline-block;
+  background-color: $semga;
+  color: $white;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 26px;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 4px;
+  border-radius: 3px;
+  cursor: pointer;
+  i {
+    margin-right: 6px;
+  }
+  &:hover {
+    opacity: .8;
+  }
+  &_big {
+    width: 100%;
+    text-align: center;
+    padding: 9px;
+  }
+  &_gray {
+    background-color: $violet_light;
+  }
+}
+
+.input {
+  width: 190px;
+  padding: 7px 20px;
+  border: 1px solid $blue_light;
+  font-size: 13px;
+  border-radius: 20px;
+  &_cornered {
+    width: 100%;
+    border-radius: 3px;
+    padding: 7px 10px;
+  }
+}
+

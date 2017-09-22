@@ -1,0 +1,295 @@
+<!doctype html>
+<html ng-app="BooksApp">
+<!doctype html>
+<html>
+<head>
+    <title>BooksApp</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=760px, initial-scale=1, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://use.fontawesome.com/6e87c517a3.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.6/angular.min.js"></script>
+
+    <script src="../node_modules/angular/angular.js"></script>
+    <script src="../node_modules/angular-route/angular-route.js"></script>
+    <script src="../node_modules/angular-animate/angular-animate.js"></script>
+    <script src="../node_modules/angular-aria/angular-aria.js"></script>
+
+</head>
+<body>
+<div class="main">
+    <div class="main__sidebar">
+        <div class="sidebar">
+            <div class="sidebar__add">
+                <a href="#" class="btn btn_big" ng-click="$rootScope.showAddModal = true;"><i class="fa fa-plus"></i>
+                    Add a book</a>
+            </div>
+            <div class="sidebar__menu">
+                <ul class="menu">
+                    <li class="menu__item">
+                        <a href="#"><i class="fa fa-book"></i> Now Reading</a>
+                    </li>
+                    <li class="menu__item menu__item_active">
+                        <a href="#!/books"><i class="fa fa-globe"></i> Browse</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#"><i class="fa fa-shopping-cart"></i> Buy Books</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#"><i class="fa fa-star"></i> Favourite Books</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#"><i class="fa fa-th-list"></i> Wishlist</a>
+                    </li>
+                </ul>
+
+            </div>
+            <div class="sidebar__actions actions">
+                <div class="actions__item action">
+                    <i class="action__icon fa fa-clock-o"></i>
+                    <div class="action__text">
+                        <span>You added <a href="#">Fight Club</a> by <a href="#">Chuck Palahniuk</a> to your <a
+                                href="#">Must Read Titles</a>.</span>
+                    </div>
+                    <div class="action__time">
+                        <span>24 minutes ago</span>
+                    </div>
+                </div>
+                <div class="actions__item action">
+                    <i class="action__icon fa fa-clock-o"></i>
+                    <div class="action__text">
+                        <span>You added <a href="#">The Trial</a> by <a href="#">Franz Kafka</a> to your <a href="#">Must Read Titles</a>.</span>
+                    </div>
+                    <div class="action__time">
+                        <span>24 minutes ago</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main__content">
+        <div class="topbar">
+            <div class="topbar__heading">
+                <h1>Browse Available Books</h1>
+            </div>
+            <div class="topbar__filter filter">
+
+                <div class="filter__list" ng-init="filter='all'">
+                    <input id="filter-1" type="radio" name="filter" ng-model="filter" value="all" checked>
+                    <label for="filter-1">
+                        <div class="filter__item">
+                            <span>All books</span>
+                        </div>
+                    </label>
+                    <input id="filter-2" type="radio" name="filter" ng-model="filter" value="recent">
+                    <label for="filter-2">
+                        <div class="filter__item">
+                            <span>Most Recent</span>
+                        </div>
+                    </label>
+                    <input id="filter-3" type="radio" name="filter" ng-model="filter" value="popular">
+                    <label for="filter-3">
+                        <div class="filter__item">
+                            <span>Most Popular</span>
+                        </div>
+                    </label>
+                    <input id="filter-4" type="radio" name="filter" ng-model="filter" value="free">
+                    <label for="filter-4">
+                        <div class="filter__item">
+                            <span>Free Books</span>
+                        </div>
+                    </label>
+
+                </div>
+                <div class="filter__right">
+                    <div class="filter__search">
+                        <input class="input" type="text" placeholder="Enter Keywords" ng-model="search">
+                        <i class="fa fa-search"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <ng-view></ng-view>
+    </div>
+</div>
+<div ng-controller="BooksAddModalCtrl" >
+    <div class="modal" ng-show="$rootScope.showAddModal">
+        <div class="modal__wrap">
+            <div class="modal__body">
+                <div class="modal__close" ng-click="$rootScope.showAddModal = false;">
+                    <i class="fa fa-close"></i>
+                </div>
+                <div class="modal__content modal-add">
+                    <div class="modal-add__heading">
+                        <h2>Add new book</h2>
+                    </div>
+                    <div class="modal-add__content">
+                        <div class="modal-add__tabs">
+                            <ul class="tabs">
+                                <li class="tabs__item" ng-click="setActiveTab(1)"
+                                    ng-class="{ tabs__item_active: isActiveTab(1)}">
+                                    <i class="fa fa-align-center"></i><span>General</span>
+                                </li>
+                                <li class="tabs__item" ng-click="setActiveTab(2)"
+                                    ng-class="{ tabs__item_active: isActiveTab(2)}">
+                                    <i class="fa fa-tags"></i><span>Genre</span>
+                                </li>
+                                <li class="tabs__item" ng-click="setActiveTab(3)"
+                                    ng-class="{ tabs__item_active: isActiveTab(3)}">
+                                    <i class="fa fa-file-image-o"></i><span>Poster</span>
+                                </li>
+                                <li class="tabs__item" ng-click="setActiveTab(4)"
+                                    ng-class="{ tabs__item_active: isActiveTab(4)}">
+                                    <i class="fa fa-info-circle"></i><span>Info</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="modal-add__form form">
+                            <form name="addBookForm">
+                                <div class="form__block" ng-show="isActiveTab(1)">
+                                    <div class="form__row">
+                                        <div class="form__item">
+                                            <div class="form__label form__label_required">
+                                                <span>Title</span>
+                                            </div>
+                                            <div class="form__input">
+                                                <input type="text" class="input input_cornered"
+                                                       placeholder="Enter title" ng-model="addBookForm.title" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form__row">
+                                        <div class="form__item">
+                                            <div class="form__label form__label_required">
+                                                <span>Author</span>
+                                            </div>
+                                            <div class="form__input">
+                                                <input type="text" class="input input_cornered"
+                                                       placeholder="Enter author" ng-model="addBookForm.author" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form__row">
+                                        <div class="form__item">
+                                            <div class="form__label form__label_required">
+                                                <span>Publisher</span>
+                                            </div>
+                                            <div class="form__input">
+                                                <input type="text" class="input input_cornered"
+                                                       placeholder="Enter publisher">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form__row">
+                                        <div class="form__item">
+                                            <div class="form__label">
+                                                <span>Paperback</span>
+                                            </div>
+                                            <div class="form__input">
+                                                <input type="text" class="input input_cornered"
+                                                       placeholder="Enter paperback">
+                                            </div>
+                                        </div>
+                                        <div class="form__item">
+                                            <div class="form__label form__label_required">
+                                                <span>ISBN</span>
+                                            </div>
+                                            <div class="form__input">
+                                                <input type="text" class="input input_cornered" placeholder="Enter ISBN"
+                                                       ng-model="addBookForm.ISBN">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form__row">
+                                        <div class="form__item">
+                                            <div class="form__label form__label_required">
+                                                <span>Summary</span>
+                                            </div>
+                                            <div class="form__input">
+                                                <input type="text" class="input input_cornered"
+                                                       placeholder="Enter summary">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form__block" ng-show="isActiveTab(2)">
+                                    <div class="form__row">
+                                        <div class="form__item">
+                                            <div class="form__label form__label_required">
+                                                <span>Genre</span>
+                                            </div>
+                                            <div class="form__input">
+                                                <input type="text" class="input input_cornered"
+                                                       placeholder="Enter genre">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form__block" ng-show="isActiveTab(3)">
+                                    <div class="form__row">
+                                        <div class="form__item">
+                                            <div class="form__label form__label_required">
+                                                <span>Poster</span>
+                                            </div>
+                                            <div class="form__input">
+                                                <span>Default poster is book-1.jpg =(</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form__block" ng-show="isActiveTab(4)">
+                                    <div class="form__row">
+                                        <div class="form__item">
+                                            <div class="form__label form__label_required">
+                                                <span>Info</span>
+                                            </div>
+                                            <div class="form__input">
+                                        <textarea class="input input_cornered" name="" id="" cols="30"
+                                                  rows="10"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="modal-add__footer">
+                        <a href="#" ng-click="$rootScope.showAddModal = false;" class="btn btn_gray">Cancel</a>
+                        <a href="#" class="btn"
+                           ng-click="sendForm(); $rootScope.showAddModal = false; $rootScope.showOkModal = true;"
+                           ng-disabled="addBookForm.$invalid">Add
+                            book</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" ng-show="$rootScope.showOkModal">
+        <div class="modal__wrap">
+            <div class="modal__body modal__body_ok">
+                <div class="modal__close">
+                    <i class="fa fa-close"></i>
+                </div>
+                <div class="modal__content modal-ok">
+                    <div class="modal-ok__heading">
+                        <h2>The book &laquo;{{ addBookForm.title }}&raquo; successfully added</h2>
+                    </div>
+                    <div class="modal-ok__footer">
+                        <a href="#" class="btn" ng-click="$rootScope.showOkModal = false;">Close</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="src/BooksApp.js"></script>
+<script src="src/BooksService/BooksService.js"></script>
+<script src="src/BooksList/BooksListCtrl.js"></script>
+<script src="src/BooksAddModal/BooksAddModalCtrl.js"></script>
+
+</body>
+</html>
